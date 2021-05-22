@@ -1,0 +1,16 @@
+@import 'colors';
+@import 'mixins';
+
+$primary-background-color: $light-pink;
+$secondary-background-color: $white;
+$primary-border-color: $black;
+
+@font-face {
+    font-family: 'BigJohn';
+    src: local('BigJohn'), url(../fonts/BigJohn.woff) format('woff');
+  }
+
+  @font-face {
+    font-family: 'SlimJoe';
+    src: local('SlimJoe'), url(../fonts/SlimJoe.woff) format('woff');
+  }
