@@ -1,13 +1,13 @@
 /** @jsxImportSource theme-ui */
-import { useHistory } from "react-router-dom";
-import { Box, Heading } from "rebass";
+import { useHistory } from "react-router-dom"
+import { Box, Heading } from "rebass"
 
 function PlantCard(props) {
     const history = useHistory()
     const {urlSource} = props
 
     const onButtonClick = (e) => {
-        history.push('/plant')
+        history.push('/plant/fiddle-leaf-fig')
     };
     
     return (

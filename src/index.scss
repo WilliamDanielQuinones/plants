@@ -1,5 +1,10 @@
-html, body, #root, .App {
+html {
+  overflow-x: hidden !important;
+}
+
+html, body, #root {
   height: calc(100%);
+  width: calc(100%);
 }
 
 body {

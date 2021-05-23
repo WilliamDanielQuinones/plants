@@ -1,29 +1,66 @@
 /** @jsxImportSource theme-ui */
-import { Heading } from 'rebass'
-import './styles.scss';
+import {useEffect, useState} from 'react'
+import { useHistory } from "react-router-dom"
+import { Image } from 'rebass'
+import PlantApi from '../../api/Plant'
 
-function Home() {
+function Plant(props) {
+    const { plantId } = props
+    const history = useHistory()
+    const [plant, setPlant] = useState()
+
+    async function getPlant() {
+        let plant = await PlantApi.getPlantByPath(plantId)
+        if(plant) setPlant(plant)
+        else history.push('/')
+    }
+
+    useEffect(() => {
+        getPlant()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
+
   return (
-    <div className='plant'>
-        <div className='plant-header'>
-            <Heading
-                sx={{
-                    position: 'absolute',
-                    fontFamily: 'BigJohn !important',
-                    fontWeight: 100,
-                    paddingBottom: '10%'
-                }}
-                fontSize={[ 5, 6 ]}
-                textAlign='center'>
-                Fiddle Leaf Fig
-            </Heading>
-            <img src={'https://i.imgur.com/S6WJVBJ.jpg'} alt="logo" sx={{width: '100vw'}}/>
-        </div>
-        <div className='plant-content'>
-            Dis my plant
-        </div>
+    <div sx={{
+        display: 'flex',
+        fontWeight: 'bold',
+        fontSize: 4,
+        backgroundColor: 'primary',
+        width: '100%',
+        height: '100%',
+        justifyContent: 'flex-start',
+        alignItems: 'flex-start',
+        flexDirection: 'column'
+      }}>
+          {plant &&
+            <div>
+                <div className='plant-background'
+                    sx={{
+                        zIndex: '0',
+                        position: 'absolute'
+                    }}>
+                    <Image
+                        src={plant.pictures[0].url}
+                        sx={{
+                            width: [ '100%', '50%' ],
+                            borderRadius: 8,
+                            position: 'fixed',
+                            zIndex: '0',
+                        }}/>
+                </div>
+                <div className='plant-content'
+                    sx={{
+                        zIndex: '100',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        flexDirection: 'column'
+                    }}>
+                    <p>{plant.name}</p>
+                </div>
+            </div>}
+        
     </div>
   );
 }
 
-export default Home;
+export default Plant;
