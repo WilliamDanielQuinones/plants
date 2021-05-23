@@ -1,0 +1,10 @@
+@import "../../scss/config";
+
+.home-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-content {
+    @include pad-box(24px);
+}
