@@ -1,11 +1,18 @@
 /** @jsxImportSource theme-ui */
+import { useHistory } from "react-router-dom";
 import { Box, Heading } from "rebass";
-import {CSSTransition} from 'react-transition-group';
 
 function PlantCard(props) {
+    const history = useHistory()
     const {urlSource} = props
+
+    const onButtonClick = (e) => {
+        history.push('/plant')
+    };
+    
     return (
         <Box
+            onClick={onButtonClick}
             className='plant-card'
             sx={{
                 variant: 'variants.card',
