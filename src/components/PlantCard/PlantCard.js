@@ -16,7 +16,7 @@ function PlantCard(props) {
             className='plant-card'
             sx={{
                 variant: 'variants.card',
-                backgroundImage: `url(${urlSource})`,
+                backgroundImage: `url('${urlSource}')`,
                 transition: 'all 0.2s',
                 height: '100%',
                 width: '100%',

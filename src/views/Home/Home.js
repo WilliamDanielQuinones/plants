@@ -1,7 +1,8 @@
 /** @jsxImportSource theme-ui */
-import { Heading } from 'rebass'
+import { Heading, Image } from 'rebass'
 import './styles.scss';
 import header from '../../assets/header_background.png'
+import footer from '../../assets/footer.gif'
 import PlantOverview from '../../components/PlantOverview/PlantOverview'
 
 function Home() {
@@ -24,6 +25,16 @@ function Home() {
         <div className='home-content' sx={{transform: ['translate(0, -50px)', 'translate(0, -50px)', 'translate(0, -100px)']}}>
             <PlantOverview></PlantOverview>
         </div>
+        <div className='footer'
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              height: '10%',
+              alignItems: 'center'
+            }}>
+              <Image src={footer} sx={{borderRadius: '36px'}}></Image>
+              <p sx={{fontFamily: 'BigJohn'}}>Thanks for visiting!</p>
+          </div>
     </div>
   );
 }
