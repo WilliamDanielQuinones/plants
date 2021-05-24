@@ -266,6 +266,12 @@ function Plant(props) {
                             }}>
                             {renderPlantDislikes()}
                         </ul>
+                        <a  sx={{
+                                width: '100%', fontFamily: 'body', fontSize: [2, 2, 4], p: 0, m: 0, pt:2
+                            }}
+                            target="_blank" rel="noreferrer" href={plant.databaseUrl}>
+                            Database
+                        </a>
                     </div>
                 </div>
             </div>}
