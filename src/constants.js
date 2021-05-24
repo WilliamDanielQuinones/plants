@@ -1,8 +1,14 @@
+export const PlantInfoTypes = {
+    Light: 'light',
+    Water: 'water',
+    Text: 'text'
+}
+
 export const LightLevels = {
-    High: 'High',
-    BrightIndirect: 'Bright & indirect',
-    Medium: 'Medium',
-    Low: 'Low'
+    High: 'High levels of light',
+    BrightIndirect: 'Bright & indirect sunlight',
+    Medium: 'Medium amount of light',
+    Low: 'Not much light necessary'
 }
 
 export const WaterLevels = {

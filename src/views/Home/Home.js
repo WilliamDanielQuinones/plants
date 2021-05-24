@@ -19,9 +19,9 @@ function Home() {
                 textAlign='center'>
                 Hi, these are my plants!
             </Heading>
-            <img src={header} alt="logo" sx={{width: '100vw'}}/>
+            <img src={header} alt="logo" sx={{width: '100%', borderRadius: ['0 0 32px 32px', '0 0 32px 32px', '0 0 128px 128px']}}/>
         </div>
-        <div className='home-content'>
+        <div className='home-content' sx={{transform: ['translate(0, -50px)', 'translate(0, -50px)', 'translate(0, -100px)']}}>
             <PlantOverview></PlantOverview>
         </div>
     </div>

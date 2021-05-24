@@ -1,5 +1,5 @@
 const theme = {
-    breakpoints: ['40em', '52em', '64em'],
+    breakpoints: ['40em', '@media (min-width: 56em) and (orientation: landscape)', '64em',],
     fontSizes: [
       12, 14, 16, 20, 24, 32, 48, 64
     ],
@@ -33,7 +33,9 @@ const theme = {
     },
     shadows: {
       small: '0 0 4px rgba(0, 0, 0, .125)',
-      large: '0 0 24px rgba(0, 0, 0, .125)'
+      smallColor: '0 0 24px #015045',
+      large: '0 0 24px rgba(0, 0, 0, .125)',
+      largeColor: '0 0 24px #015045'
     },
     variants: {
       card: {
@@ -45,6 +47,19 @@ const theme = {
         py: 5,
         maxWidth: [ 8 ],
         overflow: 'hidden'
+      },
+      smallCard: {
+        backgroundSize: 'cover',
+        borderRadius: 8,
+        color: 'secondary',
+        bg: 'gray',
+        p: 3,
+        overflow: 'hidden',
+        boxShadow: 'small',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'column'
       }
     },
     text: {

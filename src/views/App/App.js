@@ -11,8 +11,6 @@ function App() {
       <div className="app" 
         sx={{
           display: 'table',
-          fontWeight: 'bold',
-          fontSize: 4,
           backgroundColor: 'primary',
           width: '100%',
           height: '100%',
