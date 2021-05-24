@@ -19,7 +19,7 @@ function PlantOverview() {
   }
 
   function renderPlants() {
-    return plants.map((plant, index) => <PlantCard key={index} urlSource={plant.thumbnail}>{plant.name}</PlantCard>)
+    return plants.map((plant, index) => <PlantCard key={index} thumbnailUrl={plant.thumbnail} path={plant.path}>{plant.name}</PlantCard>)
   }
 
   return (

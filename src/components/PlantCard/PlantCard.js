@@ -4,10 +4,10 @@ import { Box, Heading } from "rebass"
 
 function PlantCard(props) {
     const history = useHistory()
-    const {urlSource} = props
+    const {thumbnailUrl, path} = props
 
     const onButtonClick = (e) => {
-        history.push('/plant/fiddle-leaf-fig')
+        history.push(`/plant/${path}`)
     };
     
     return (
@@ -16,7 +16,7 @@ function PlantCard(props) {
             className='plant-card'
             sx={{
                 variant: 'variants.card',
-                backgroundImage: `url('${urlSource}')`,
+                backgroundImage: `url('${thumbnailUrl}')`,
                 transition: 'all 0.2s',
                 height: '100%',
                 width: '100%',

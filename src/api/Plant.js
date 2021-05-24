@@ -37,8 +37,8 @@ const data = [
     {
         id: 34568,
         thumbnail: '',
-        name: "",
-        path: "",
+        name: "Majesty Palm",
+        path: "majesty-palm",
         description: "",
         descriptionSource: "",
         pictures: [
@@ -59,8 +59,8 @@ const data = [
     {
         id: 34568,
         thumbnail: '',
-        name: "",
-        path: "",
+        name: "White Butterfly",
+        path: "white-butterfly",
         description: "",
         descriptionSource: "",
         pictures: [
@@ -81,8 +81,8 @@ const data = [
     {
         id: 34568,
         thumbnail: '',
-        name: "",
-        path: "",
+        name: "Devil's Ivy",
+        path: "devils-ivy",
         description: "",
         descriptionSource: "",
         pictures: [
@@ -103,8 +103,8 @@ const data = [
     {
         id: 34568,
         thumbnail: '',
-        name: "",
-        path: "",
+        name: "Prince of Orange",
+        path: "prince-of-orange",
         description: "",
         descriptionSource: "",
         pictures: [
@@ -125,8 +125,8 @@ const data = [
     {
         id: 34568,
         thumbnail: '',
-        name: "",
-        path: "",
+        name: "Gray Dragon",
+        path: "gray-dragon",
         description: "",
         descriptionSource: "",
         pictures: [
@@ -147,8 +147,8 @@ const data = [
     {
         id: 34568,
         thumbnail: '',
-        name: "",
-        path: "",
+        name: "Mandarin Spider",
+        path: "mandarin-spider",
         description: "",
         descriptionSource: "",
         pictures: [
@@ -169,8 +169,8 @@ const data = [
     {
         id: 34568,
         thumbnail: '',
-        name: "",
-        path: "",
+        name: "Ruby Ficus Elastica",
+        path: "ruby-ficus-elastica",
         description: "",
         descriptionSource: "",
         pictures: [
@@ -191,8 +191,8 @@ const data = [
     {
         id: 34568,
         thumbnail: '',
-        name: "",
-        path: "",
+        name: "Nerve Plant",
+        path: "nerve-plant",
         description: "",
         descriptionSource: "",
         pictures: [
@@ -213,8 +213,8 @@ const data = [
     {
         id: 34568,
         thumbnail: '',
-        name: "",
-        path: "",
+        name: "Monolena Primuliflora",
+        path: "monolena-primuliflora",
         description: "",
         descriptionSource: "",
         pictures: [
@@ -235,8 +235,30 @@ const data = [
     {
         id: 34568,
         thumbnail: '',
-        name: "",
-        path: "",
+        name: "Hoya Compacta",
+        path: "hoya-compacta",
+        description: "",
+        descriptionSource: "",
+        pictures: [
+            {
+                url: '',
+                date: new Date("May 22, 2021"),
+                comment: ''
+            },
+        ],
+        likes: [
+            
+        ],
+        dislikes: [
+            ''
+        ],
+        databaseUrl: ''
+    },
+    {
+        id: 34568,
+        thumbnail: '',
+        name: "Ponytail Palm",
+        path: "ponytail-palm",
         description: "",
         descriptionSource: "",
         pictures: [
