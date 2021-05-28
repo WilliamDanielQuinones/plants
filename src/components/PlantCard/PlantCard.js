@@ -21,7 +21,7 @@ function PlantCard(props) {
                 height: '100%',
                 width: '100%',
                 ':hover': {
-                    color: 'green',
+                    color: 'orange',
                     cursor: 'pointer',
                     width: '105%',
                     height: '105%'

@@ -70,11 +70,11 @@ function Plant(props) {
         setDelayedAnimation(true)
         setTimeout(() => {
             setDelayedAnimation(false)
-        }, pictureMode ? 750 : 50)
+        }, pictureMode ? 800 : 50)
         if(!pictureMode) { // if turning on picture mode
             setTimeout(() => {
                 setDisplayPictureModeControls(true)
-            }, 750)
+            }, 700)
         }else {
             setDisplayPictureModeControls(false)
         }
@@ -130,56 +130,66 @@ function Plant(props) {
                 <div className='picture-mode-buttons' 
                     sx={{
                         display: displayPictureModeControls ? 'flex' : 'none',
-                        transition: 'display 2s',
+                        transition: 'display 1s',
                         postion: 'absolute',
                         justifyContent: 'space-between', flexDirection: 'row',
                         flexGrow: 1,
                         pl: 2,
                         pr: 2,
                         width: '100%'}}>
-                    <Button
-                        onClick={previousPicture}
-                        sx={{
-                            display: currentPictureId < amountOfPictures ? 'flex' : 'none',
-                            borderRadius: '100% !important',
-                            backgroundColor: 'green',
-                            boxShadow: 'large',
-                            alignSelf: 'flex-start',
-                            justifySelf: 'flex-start',
-                            zIndex: 50,
-                            transition: 'all 0.3s',
-                            width: ['15%', '7%', '5%'],
-                            height: '100%',
-                            ':hover': {
-                                backgroundColor: 'orange',
-                                cursor: 'pointer',
-                                boxShadow: 'largeColor',
-                            }}}>
-                            <FeatherIcon sx={{color: 'white', marginTop: '5px'}} icon="arrow-left"/>
-                    </Button>
-                    <Button
-                        onClick={nextPicture}
-                        sx={{
-                            display: currentPictureId < amountOfPictures ? 'flex' : 'none',
-                            borderRadius: '100% !important',
-                            backgroundColor: 'green',
-                            boxShadow: 'large',
-                            alignSelf: 'flex-end',
-                            justifySelf: 'flex-end',
-                            zIndex: 50,
-                            transition: 'all 0.3s',
-                            width: ['15%', '7%', '5%'],
-                            height: '100%',
-                            ':hover': {
-                                backgroundColor: 'orange',
-                                cursor: 'pointer',
-                                boxShadow: 'largeColor',
-                            }}}>
-                            <FeatherIcon sx={{color: 'white', marginTop: '5px'}} icon="arrow-right"/>
-                    </Button>
+                    <div sx={{height: '55px', width: '55px', display: currentPictureId < amountOfPictures ? 'flex' : 'none'}}>
+                        <Button
+                            onClick={previousPicture}
+                            sx={{
+                                borderRadius: '100% !important',
+                                backgroundColor: 'transparent',
+                                alignSelf: 'flex-start',
+                                justifySelf: 'flex-start',
+                                zIndex: 50,
+                                transition: 'all 1s',
+                                width: '100%',
+                                height: '100%',
+                                ':hover': {
+                                    backgroundColor: 'orange',
+                                    opacity: '0.5',
+                                    cursor: 'pointer',
+                                }}}>
+                                <FeatherIcon sx={{color: 'white', marginTop: '5px'}} icon="arrow-left"/>
+                        </Button>
+                    </div>
+                    
+                    <div sx={{height: '55px', width: '55px', display: currentPictureId < amountOfPictures ? 'flex' : 'none'}}>
+                        <Button
+                            onClick={nextPicture}
+                            sx={{
+                                borderRadius: '100% !important',
+                                backgroundColor: 'transparent',
+                                alignSelf: 'flex-start',
+                                justifySelf: 'flex-start',
+                                zIndex: 50,
+                                transition: 'all 1s',
+                                width: '100%',
+                                height: '100%',
+                                ':hover': {
+                                    backgroundColor: 'orange',
+                                    opacity: '0.5',
+                                    cursor: 'pointer',
+                                }}}>
+                                <FeatherIcon sx={{color: 'white', marginTop: '5px'}} icon="arrow-right"/>
+                        </Button>
+                    </div>
+                    
                 </div>
                 <div sx={{height: pictureMode ? '100%' : ['50%', '50%', '100%'], transition: 'all 1s'}}></div>
-                <div className='button' sx={{display: 'flex', justifyContent: 'flex-end', flexDirection: 'row', alignItems: 'flex-end', width: '100%', mr: '50px'}}>
+                <div className='button' sx={{
+                    display: 'flex',
+                    justifyContent: 'flex-end',
+                    flexDirection: 'row',
+                    alignItems: 'flex-end',
+                    width: '100%',
+                    mr: '50px',
+                    transform: 'translate(0, 30px)',
+                    zIndex: 500}}>
                     <Button
                         onClick={togglePictureMode}
                         sx={{
@@ -187,15 +197,14 @@ function Plant(props) {
                             backgroundColor: 'green',
                             boxShadow: 'large',
                             alignSelf: 'flex-end',
-                            transform: 'translate(0, 30px)',
-                            zIndex: 500,
-                            transition: 'all 0.3s',
+                            transition: 'all 1s',
                             ':hover': {
                                 backgroundColor: 'orange',
+                                opacity: '0.5',
                                 cursor: 'pointer',
                                 boxShadow: 'largeColor',
                             }}}>
-                            <FeatherIcon sx={{color: 'white', marginTop: '5px', display: pictureMode ? 'none' : 'inline'}} icon="arrow-down"/>
+                            <FeatherIcon sx={{color: 'white',marginTop: '5px', display: pictureMode ? 'none' : 'inline',}} icon="arrow-down"/>
                             <FeatherIcon sx={{color: 'white', marginTop: '5px', display: pictureMode ? 'inline' : 'none'}} icon="arrow-up"/>
                     </Button>
                 </div>
@@ -209,7 +218,7 @@ function Plant(props) {
                         backgroundColor: 'white',
                         borderRadius: '36px 36px 0px 0px',
                         width: '100%',
-                        flexBasis: pictureMode ? '0%' : ['100%', '100%', '70%'],
+                        flexBasis: pictureMode ? '0%' : '100%',
                         transition: 'all 1s',
                         p: 4,
                         pb: 0
@@ -218,7 +227,7 @@ function Plant(props) {
                         sx={{
                             fontFamily: 'heading',
                             width: '100%',
-                            mb: [2, 2, 4],
+                            mb: [4, 4, 4],
                             fontSize: [3, 3, 5]
                         }}>
                         <span sx={{}}>{plant.name}</span>
@@ -231,43 +240,44 @@ function Plant(props) {
                             width: '100%',
                             flexGrow: 1,
                             overflow: 'hidden',
+                            mb: [4, 4, 4],
                             transform: pictureMode ? 'translate(0, 1000px)' : 'translate(0, 0)',
                             display: pictureMode ? (delayedAnimation ? 'block' : 'none') :  (delayedAnimation ? 'none' : 'block'),
-                            transition: 'all 2s'}}>
+                            transition: 'all 1s'}}>
                         <div className='description'
                             sx={{
-                                fontSize: [1, 1, 3],
+                                fontSize: [1, 1, 1],
                                 width: '100%'
                             }}>
                             <p sx={{margin: '0'}}> {plant.description} - <a target="_blank" rel="noreferrer" href={plant.descriptionSource}>source</a> </p>
                         </div>
                         <p sx={{
-                            width: '100%', fontFamily: 'heading', fontSize: [3, 3, 5], mb: [2, 2, 4], mt: [3, 3, 4]
+                            width: '100%', fontFamily: 'heading', fontSize: [2, 2, 3], mb: [1, 1, 2], mt: [1, 1, 2]
                             }}>
                             Info
                         </p>
                         <p sx={{
-                            width: '100%', fontFamily: 'body', fontSize: [2, 2, 4], p: 0, m: 0
+                            width: '100%', fontFamily: 'body', fontSize: [2, 2, 3], p: 0, m: 0
                             }}>
                             Likes:
                         </p>
                         <ul sx={{
-                            width: '100%', fontFamily: 'body', fontSize: [1, 1, 3], m: 0, mb: 2
+                            width: '100%', fontFamily: 'body', fontSize: [1, 1, 2], m: 0, mb: 2
                             }}>
                             {renderPlantLikes()}
                         </ul>
                         <p sx={{
-                            width: '100%', fontFamily: 'body', fontSize: [2, 2, 4], p: 0, m: 0
+                            width: '100%', fontFamily: 'body', fontSize: [2, 2, 3], p: 0, m: 0
                             }}>
                             Dislikes:
                         </p>
                         <ul sx={{
-                            width: '100%', fontFamily: 'body', fontSize: [1, 1, 3], m: 0
+                            width: '100%', fontFamily: 'body', fontSize: [1, 1, 2], m: 0
                             }}>
                             {renderPlantDislikes()}
                         </ul>
                         <a  sx={{
-                                width: '100%', fontFamily: 'body', fontSize: [2, 2, 4], p: 0, m: 0, pt:2
+                                width: '100%', fontFamily: 'body', fontSize: [2, 2, 3], p: 0, m: 0, pt:2
                             }}
                             target="_blank" rel="noreferrer" href={plant.databaseUrl}>
                             Database

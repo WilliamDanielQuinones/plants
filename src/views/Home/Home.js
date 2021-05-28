@@ -1,6 +1,6 @@
 /** @jsxImportSource theme-ui */
 import { Heading, Image } from 'rebass'
-import './styles.scss';
+import './styles.scss'
 import header from '../../assets/header_background.png'
 import footer from '../../assets/footer.gif'
 import PlantOverview from '../../components/PlantOverview/PlantOverview'
@@ -30,10 +30,13 @@ function Home() {
               display: 'flex',
               flexDirection: 'column',
               height: '10%',
-              alignItems: 'center'
+              alignItems: 'center',
+              justifyContent: 'center',
+              backgroundColor: 'green',
+              p: 4
             }}>
               <Image src={footer} sx={{borderRadius: '36px'}}></Image>
-              <p sx={{fontFamily: 'BigJohn'}}>Thanks for visiting!</p>
+              <p sx={{fontFamily: 'BigJohn', fontSize: [3, 3, 5], m: 1, color: 'orange'}}>Thanks for visiting!</p>
           </div>
     </div>
   );
