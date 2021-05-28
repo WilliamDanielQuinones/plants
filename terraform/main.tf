@@ -1,13 +1,13 @@
 provider "aws" {
   version = "~> 2.0"
-  region  = "us-east-2"
+  region  = "us-east-1"
 }
 
 terraform {
   backend "s3" {
     bucket         = "daniel-personal-terraform-state"
     key            = "plants/terraform.tfstate"
-    region         = "us-east-2"
+    region         = "us-east-1"
     encrypt        = true
   }
 }
