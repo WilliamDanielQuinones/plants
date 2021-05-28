@@ -30,7 +30,7 @@ module "acm_request_certificate" {
 module "cloudfront-s3-cdn" {
   source  = "cloudposse/cloudfront-s3-cdn/aws"
   version = "0.34.1"
-  name               = "daniels-plants"
+  name               = "daniels-plants-website"
   encryption_enabled = true
   # DNS Settings
   parent_zone_id      = data.aws_route53_zone.zone.id
