@@ -15,7 +15,7 @@ jobs:
     # Download a specific Terraform version you'd like to use
     - uses: hashicorp/setup-terraform@v1
       with:
-        terraform_version: 0.13.2
+        terraform_version: 0.13.5
         cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
         terraform_wrapper: false
     # Ensure you have AWS credentials set up. Your config will likely differ here
