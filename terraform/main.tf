@@ -5,7 +5,7 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket         = "daniel-personal-terraform-state"
+    bucket         = "daniels-personal-terraform-state"
     key            = "plants/terraform.tfstate"
     region         = "us-east-1"
     encrypt        = true
