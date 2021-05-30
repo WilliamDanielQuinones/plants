@@ -31,6 +31,14 @@ function Plant(props) {
         if(plant) setCurrentPicture(plant.pictures[currentPictureId].url)
     }
 
+    function getCurrentPictureDate() {
+        if(plant) return plant.pictures[currentPictureId].date.toLocaleDateString("en-US")
+    }
+
+    function getCurrentPictureComment() {
+        if(plant) return plant.pictures[currentPictureId].comment
+    }
+
     function getAmountOfPictures() {
         if(plant) setAmountOfPictures(plant.pictures.length)
     }
@@ -93,10 +101,10 @@ function Plant(props) {
                 <div className='plant-background'
                     sx={{
                         display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
+                        flexDirection: 'column',
+                        justifyContent: 'flex-start',
+                        alignItems: 'flex-start',
                         zIndex: '0',
-                        borderRadius: '36px 36px 0px 0px',
                         position: 'absolute',
                         height: '100%',
                         overflow: 'clip',
@@ -107,10 +115,31 @@ function Plant(props) {
                         sx={{
                             display: 'flex',
                             zIndex: '0',
-                            minHeight: '100%',
-                            minWidth: '100%',
-                            objectFit: 'cover'
                         }}/>
+                    }
+                    {currentPicture &&
+                        <div
+                        src={currentPicture}
+                        sx={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            zIndex: '10',
+                            borderRadius: '24px 24px 0px 0px',
+                            backgroundColor: 'yellow',
+                            height: '100%',
+                            width: '100%',
+                            transform: 'translate(0, -10px)',
+                            p: 4,
+                            pb: 0,
+                            color: 'black'
+                        }}>
+                            <div sx={{fontSize: [4, 4, 5], mb: 3}}>
+                                {`${getCurrentPictureDate()}`}
+                            </div>
+                            <div sx={{fontSize: [2, 2, 3]}}>
+                                {`${getCurrentPictureComment()}`}
+                            </div>
+                        </div>
                     }
                 </div>
                 <div sx={{height: pictureMode ? '100%' : '0%', postion: 'absolute'}}></div>
@@ -201,6 +230,7 @@ function Plant(props) {
                         backgroundColor: 'white',
                         borderRadius: '36px 36px 0px 0px',
                         width: '100%',
+                        height: '100%',
                         flexBasis: pictureMode ? '0%' : '100%',
                         p: 4,
                         pb: 0

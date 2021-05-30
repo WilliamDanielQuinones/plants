@@ -10,7 +10,8 @@ const theme = {
       gray: '#bcbcbc',
       primary: '#f2a88f',
       orange: '#be3400',
-      green: '#015045'
+      green: '#015045',
+      yellow: '#FFFDD0'
     },
     sizes: [
       0, 4, 8, 16, 32, 64, 128, 256, 512

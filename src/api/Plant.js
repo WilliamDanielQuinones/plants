@@ -12,7 +12,7 @@ const data = [
             {
                 url: 'https://plants-for-the-site.s3.amazonaws.com/fiddle/Image+from+iOS+(35).jpg',
                 date: new Date("May 25, 2021"),
-                comment: 'my boy'
+                comment: 'leaf close-up with baby leaves incoming'
             },
             {
                 url: 'https://plants-for-the-site.s3.amazonaws.com/fiddle/Image+from+iOS+(36).jpg',
@@ -22,7 +22,7 @@ const data = [
             {
                 url: 'https://plants-for-the-site.s3.amazonaws.com/fiddle/Image+from+iOS+(37).jpg',
                 date: new Date("May 25, 2021"),
-                comment: 'his leaves'
+                comment: ''
             }
         ],
         likes: [
@@ -45,12 +45,12 @@ const data = [
             {
                 url: 'https://plants-for-the-site.s3.amazonaws.com/majesty-palm/Image+from+iOS+(5).jpg',
                 date: new Date("May 25, 2021"),
-                comment: ''
+                comment: 'New leaves are coming in!'
             },
             {
                 url: 'https://plants-for-the-site.s3.amazonaws.com/majesty-palm/Image+from+iOS+(6).jpg',
                 date: new Date("May 25, 2021"),
-                comment: ''
+                comment: 'Just a big leaf for now'
             },
             {
                 url: 'https://plants-for-the-site.s3.amazonaws.com/majesty-palm/Image+from+iOS+(7).jpg',
@@ -149,12 +149,12 @@ const data = [
             {
                 url: 'https://plants-for-the-site.s3.amazonaws.com/prince-of-orange/Image+from+iOS+(15).jpg',
                 date: new Date("May 25, 2021"),
-                comment: ''
+                comment: 'Revived after a cat attack'
             },
             {
                 url: 'https://plants-for-the-site.s3.amazonaws.com/prince-of-orange/Image+from+iOS+(16).jpg',
                 date: new Date("May 25, 2021"),
-                comment: ''
+                comment: 'Loves his bathroom window'
             },
         ],
         likes: [
@@ -177,12 +177,12 @@ const data = [
             {
                 url: 'https://plants-for-the-site.s3.amazonaws.com/gray-dragon/Image+from+iOS+(18).jpg',
                 date: new Date("May 25, 2021"),
-                comment: ''
+                comment: 'Big new leaf'
             },
             {
                 url: 'https://plants-for-the-site.s3.amazonaws.com/gray-dragon/Image+from+iOS+(17).jpg',
                 date: new Date("May 25, 2021"),
-                comment: ''
+                comment: 'Used a metal chopstick to hold up a stem'
             },
             {
                 url: 'https://plants-for-the-site.s3.amazonaws.com/gray-dragon/Image+from+iOS+(19).jpg',
@@ -210,7 +210,7 @@ const data = [
             {
                 url: 'https://plants-for-the-site.s3.amazonaws.com/mandarin-spider/Image+from+iOS+(22).jpg',
                 date: new Date("May 25, 2021"),
-                comment: ''
+                comment: 'Little bits of burnt leaves, but it grows like crazy'
             },
             {
                 url: 'https://plants-for-the-site.s3.amazonaws.com/mandarin-spider/Image+from+iOS+(21).jpg',
@@ -243,7 +243,7 @@ const data = [
             {
                 url: 'https://plants-for-the-site.s3.amazonaws.com/ruby-ficus-elastica/Image+from+iOS+(25).jpg',
                 date: new Date("May 22, 2021"),
-                comment: ''
+                comment: 'Love this guy'
             },
             {
                 url: 'https://plants-for-the-site.s3.amazonaws.com/ruby-ficus-elastica/Image+from+iOS+(24).jpg',
@@ -253,7 +253,7 @@ const data = [
             {
                 url: 'https://plants-for-the-site.s3.amazonaws.com/ruby-ficus-elastica/Image+from+iOS+(23).jpg',
                 date: new Date("May 22, 2021"),
-                comment: ''
+                comment: 'Praise the sun'
             },
         ],
         likes: [
@@ -276,7 +276,7 @@ const data = [
             {
                 url: 'https://plants-for-the-site.s3.amazonaws.com/nerve-plant/Image+from+iOS+(28).jpg',
                 date: new Date("May 25, 2021"),
-                comment: ''
+                comment: 'Water drama queen 💧'
             },
             {
                 url: 'https://plants-for-the-site.s3.amazonaws.com/nerve-plant/Image+from+iOS+(27).jpg',
@@ -309,7 +309,7 @@ const data = [
             {
                 url: 'https://plants-for-the-site.s3.amazonaws.com/monolena-primuliflora/Image+from+iOS+(30).jpg',
                 date: new Date("May 25, 2021"),
-                comment: ''
+                comment: 'Did not realize how moist this plant needs to be all times, so it looks a little rough for now'
             },
             {
                 url: 'https://plants-for-the-site.s3.amazonaws.com/monolena-primuliflora/Image+from+iOS+(29).jpg',
@@ -337,7 +337,7 @@ const data = [
             {
                 url: 'https://plants-for-the-site.s3.amazonaws.com/hoya-compacta/Image+from+iOS+(31).jpg',
                 date: new Date("May 26, 2021"),
-                comment: ''
+                comment: 'Hardy boy'
             },
         ],
         likes: [
@@ -360,7 +360,7 @@ const data = [
             {
                 url: 'https://plants-for-the-site.s3.amazonaws.com/ponytail-palm/Image+from+iOS+(32).jpg',
                 date: new Date("May 25, 2021"),
-                comment: ''
+                comment: 'Apparently a succulent, but isnt as hard to take care of like a normal one'
             },
             {
                 url: 'https://plants-for-the-site.s3.amazonaws.com/ponytail-palm/Image+from+iOS+(33).jpg',
