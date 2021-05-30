@@ -142,7 +142,7 @@ function Plant(props) {
                         </div>
                     }
                 </div>
-                <div sx={{height: pictureMode ? '100%' : '0%', postion: 'absolute'}}></div>
+                <div sx={{height: pictureMode ? '100%' : '0%', flexGrow: 1, postion: 'absolute'}}></div>
                 <div className='picture-mode-buttons' 
                     sx={{
                         display: pictureMode ? 'flex' : 'none',
@@ -152,7 +152,7 @@ function Plant(props) {
                         pl: 2,
                         pr: 2,
                         width: '100%'}}>
-                    <div sx={{height: '55px', width: '55px', display: currentPictureId < amountOfPictures ? 'flex' : 'none'}}>
+                    <div sx={{height: '55px', width: '55px', display: 'flex', visibility: currentPictureId === 0 ? 'hidden' : ''}}>
                         <Button
                             onClick={previousPicture}
                             sx={{
@@ -172,7 +172,7 @@ function Plant(props) {
                         </Button>
                     </div>
                     
-                    <div sx={{height: '55px', width: '55px', display: currentPictureId < amountOfPictures ? 'flex' : 'none'}}>
+                    <div sx={{height: '55px', width: '55px', display: 'flex', visibility: currentPictureId === amountOfPictures - 1 ? 'hidden' : ''}}>
                         <Button
                             onClick={nextPicture}
                             sx={{
@@ -240,7 +240,7 @@ function Plant(props) {
                             fontFamily: 'heading',
                             width: '100%',
                             mb: [4, 4, 4],
-                            fontSize: [3, 3, 5]
+                            fontSize: [2, 2, 5]
                         }}>
                         <span sx={{}}>{plant.name}</span>
                     </div>
@@ -250,6 +250,7 @@ function Plant(props) {
                             justifyContent: 'flex-end',
                             alignItems: 'flex-end',
                             width: '100%',
+                            height: '100%',
                             flexGrow: 1,
                             overflow: 'hidden',
                             mb: [4, 4, 4],
