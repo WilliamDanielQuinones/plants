@@ -1,9 +1,10 @@
 /** @jsxImportSource theme-ui */
-import {Route, Switch, Redirect, withRouter} from 'react-router-dom';
+import {Route, Switch, Redirect, withRouter} from 'react-router-dom'
 import { ThemeProvider } from 'theme-ui'
 import theme from '../../theme'
 import Home from '../Home/Home'
 import Plant from '../Plant/Plant'
+import ColorSwitcher from '../../components/ColorSwitcher/ColorSwitcher'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           justifyContent: 'center',
           alignItems: 'center'
         }}>
+          <ColorSwitcher />
           <Switch>
             <Route exact path={'/'} component={Home}/>
             <Route exact path={'/plant/:plantId'} render={({ match }) => <Plant plantId={match.params.plantId}></Plant>}/>

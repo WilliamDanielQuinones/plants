@@ -227,13 +227,14 @@ function Plant(props) {
                         justifyContent: 'flex-start',
                         alignItems: 'flex-start',
                         flexDirection: 'column',
-                        backgroundColor: 'white',
+                        backgroundColor: 'secondary',
                         borderRadius: '36px 36px 0px 0px',
                         width: '100%',
                         height: '100%',
                         flexBasis: pictureMode ? '0%' : '100%',
                         p: 4,
-                        pb: 0
+                        pb: 0,
+                        color: 'black'
                     }}>
                     <div className='title'
                         sx={{
