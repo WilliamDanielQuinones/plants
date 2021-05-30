@@ -95,6 +95,12 @@ resource "aws_cloudfront_distribution" "website-cdn" {
     response_page_path = "/index.html"
     response_code = 200
   }
+  custom_error_response {
+    error_code = 403
+    error_caching_min_ttl = 86400
+    response_page_path = "/index.html"
+    response_code = 200
+  }
 }
 
 ## iam policy to invalidate index.html file in cloudfront to force servers to re-fetch index from s3 

@@ -10,8 +10,6 @@ function Plant(props) {
     const history = useHistory()
     const [plant, setPlant] = useState()
     const [pictureMode, setPictureMode] = useState(false)
-    const [displayPictureModeControls, setDisplayPictureModeControls] = useState(false)
-    const [delayedAnimation, setDelayedAnimation] = useState(false)
     const [currentPicture, setCurrentPicture] = useState()
     const [currentPictureId, setCurrentPictureId] = useState(0)
     const [amountOfPictures, setAmountOfPictures] = useState()
@@ -67,17 +65,6 @@ function Plant(props) {
     
     function togglePictureMode() {
         setPictureMode(!pictureMode)
-        setDelayedAnimation(true)
-        setTimeout(() => {
-            setDelayedAnimation(false)
-        }, pictureMode ? 800 : 50)
-        if(!pictureMode) { // if turning on picture mode
-            setTimeout(() => {
-                setDisplayPictureModeControls(true)
-            }, 700)
-        }else {
-            setDisplayPictureModeControls(false)
-        }
     }
 
   return (
@@ -126,11 +113,10 @@ function Plant(props) {
                         }}/>
                     }
                 </div>
-                <div sx={{height: displayPictureModeControls ? '100%' : '0%', postion: 'absolute'}}></div>
+                <div sx={{height: pictureMode ? '100%' : '0%', postion: 'absolute'}}></div>
                 <div className='picture-mode-buttons' 
                     sx={{
-                        display: displayPictureModeControls ? 'flex' : 'none',
-                        transition: 'display 1s',
+                        display: pictureMode ? 'flex' : 'none',
                         postion: 'absolute',
                         justifyContent: 'space-between', flexDirection: 'row',
                         flexGrow: 1,
@@ -146,7 +132,6 @@ function Plant(props) {
                                 alignSelf: 'flex-start',
                                 justifySelf: 'flex-start',
                                 zIndex: 50,
-                                transition: 'all 1s',
                                 width: '100%',
                                 height: '100%',
                                 ':hover': {
@@ -167,7 +152,6 @@ function Plant(props) {
                                 alignSelf: 'flex-start',
                                 justifySelf: 'flex-start',
                                 zIndex: 50,
-                                transition: 'all 1s',
                                 width: '100%',
                                 height: '100%',
                                 ':hover': {
@@ -180,7 +164,7 @@ function Plant(props) {
                     </div>
                     
                 </div>
-                <div sx={{height: pictureMode ? '100%' : ['50%', '50%', '100%'], transition: 'all 1s'}}></div>
+                <div sx={{height: pictureMode ? '100%' : ['50%', '50%', '100%']}}></div>
                 <div className='button' sx={{
                     display: 'flex',
                     justifyContent: 'flex-end',
@@ -197,7 +181,6 @@ function Plant(props) {
                             backgroundColor: 'green',
                             boxShadow: 'large',
                             alignSelf: 'flex-end',
-                            transition: 'all 1s',
                             ':hover': {
                                 backgroundColor: 'orange',
                                 opacity: '0.5',
@@ -219,7 +202,6 @@ function Plant(props) {
                         borderRadius: '36px 36px 0px 0px',
                         width: '100%',
                         flexBasis: pictureMode ? '0%' : '100%',
-                        transition: 'all 1s',
                         p: 4,
                         pb: 0
                     }}>
@@ -242,8 +224,7 @@ function Plant(props) {
                             overflow: 'hidden',
                             mb: [4, 4, 4],
                             transform: pictureMode ? 'translate(0, 1000px)' : 'translate(0, 0)',
-                            display: pictureMode ? (delayedAnimation ? 'block' : 'none') :  (delayedAnimation ? 'none' : 'block'),
-                            transition: 'all 1s'}}>
+                            display: pictureMode ? 'none' : 'block'}}>
                         <div className='description'
                             sx={{
                                 fontSize: [1, 1, 1],
@@ -252,7 +233,7 @@ function Plant(props) {
                             <p sx={{margin: '0'}}> {plant.description} - <a target="_blank" rel="noreferrer" href={plant.descriptionSource}>source</a> </p>
                         </div>
                         <p sx={{
-                            width: '100%', fontFamily: 'heading', fontSize: [2, 2, 3], mb: [1, 1, 2], mt: [1, 1, 2]
+                            width: '100%', fontFamily: 'heading', fontSize: [2, 2, 3], mb: [1, 1, 2], mt: [3, 3, 4]
                             }}>
                             Info
                         </p>
