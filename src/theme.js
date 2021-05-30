@@ -3,6 +3,7 @@ const theme = {
     fontSizes: [
       12, 14, 16, 20, 24, 32, 48, 64
     ],
+    initialColorModeName: 'dark',
     colors: {
       secondary: '#fffefe',
       black: '#060a1d',
@@ -14,16 +15,6 @@ const theme = {
       yellow: '#FFFDD0',
       modes: {
         light: {
-          secondary: '#fffefe',
-          black: '#060a1d',
-          blue: '#020d22',
-          gray: '#bcbcbc',
-          primary: '#f2a88f',
-          orange: '#be3400',
-          green: '#015045',
-          yellow: '#FFFDD0',
-        },
-        dark: {
           secondary: '#060a1d',
           black: '#fffefe',
           blue: '#be3400',
@@ -32,7 +23,7 @@ const theme = {
           orange: '#020d22',
           green: '#f2a88f',
           yellow: '#bcbcbc',
-        }
+        },
       }
     },
     sizes: [
